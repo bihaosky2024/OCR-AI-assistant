@@ -20,7 +20,7 @@ def ocr_assitant(image_path, api_key, red_box=False):
     ]
     
     completion = client.chat.completions.create(
-        model="qwen-vl-max",  
+        model="qwen-vl-ocr",  
         messages=[{"role": "user","content": [
                 {"type": "text", "text": prompt_ls[red_box]},
                 {"type": "image_url",
