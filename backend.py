@@ -14,7 +14,7 @@ def ocr_red_box(image_path, api_key):
     llm = init_openai_model(api_key, model_name="gpt-4o")
     message = HumanMessage(
         content=[
-            {"type": "text", "text": "extract text in the red box only in this image, do not output any other information. Follow the format of text in the image, For example, keep the end of line, punctuation marks, and capitalization etc."},
+            {"type": "text", "text": "extract text in the red box only in this image, do not output any other information."},
             {
                 "type": "image_url",
                 "image_url": {"url": f"data:image/jpeg;base64,{image_data}"},
